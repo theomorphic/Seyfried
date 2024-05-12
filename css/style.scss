@@ -1,0 +1,51 @@
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #000;
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+	width: 60vw;
+	
+}
+
+.container img{
+	max-width: 350px;
+	transform-origin: center;
+	transform: perspective(800px) rotateY(20deg);
+	transition: .5s;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+.container:hover img{
+	opacity: .1;
+}
+
+.container img:hover{
+	transform: perspective(800px) rotateY(0deg);
+	opacity: 1;
+}
+
+@media(max-width:1000px){
+	.container img{
+		max-width: 250px;
+	}
+}
+
+@media(max-width:800px){
+	.container img{
+		max-width: 200px;
+	}
+}
